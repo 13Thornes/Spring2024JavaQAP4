@@ -1,22 +1,32 @@
 public class Triangle extends Shape{
     String name;
-    double sideA;
-    double sideB;
-    double sideC;
+    double side1;
+    double side2;
+    double side3;
 
-    // create constructors
-    public Triangle() {
-        this.name = "Default";
-        this.sideA = 3;
-        this.sideB = 4;
-        this.sideC = 5;
-    }
+    // create constructor
 
     public Triangle(String name, double a, double b, double c) {
         this.name = name;
-        this.sideA = a;
-        this.sideB = b;
-        this.sideC = c;
+        this.side1 = a;
+        this.side2 = b;
+        this.side3 = c;
+        
+        
+          if(side1 + side2 < side3) {
+            throw new ArithmeticException("Triangle is invalid");
+          } else {
+            if(side2 + side3 < side1) {
+                throw new ArithmeticException("Triangle is invalid");
+            } else {
+                if(side3 + side1 < side2) {
+                    throw new ArithmeticException("Triangle is invalid");
+                } else {
+                    System.out.println("Triangle is valid");
+                }
+            } 
+          };
+        
     }
 
     // Getters and setters
@@ -28,41 +38,40 @@ public class Triangle extends Shape{
         this.name = name;
     }
 
-    public Double getSideA() {
-        return sideA;
+    public Double getSide1() {
+        return side1;
     }
 
     public void setSideA(double a) {
-        this.sideA = a;
+        this.side1 = a;
     }
 
-    public Double getSideB() {
-        return sideB;
+    public Double getSide2() {
+        return side2;
     }
 
-    public void setSideB(double b) {
-        this.sideB = b;
+    public void setSide2(double b) {
+        this.side2 = b;
     }
 
-    public Double getSideC() {
-        return sideC;
+    public Double getSide3() {
+        return side3;
     }
 
-    public void setSideC(double c) {
-        this.sideC = c;
+    public void setSide3(double c) {
+        this.side3 = c;
     }
 
     // Area and perimiter
 
     public void area() {
-        double height = ((sideA * sideB) / sideC);
-        double base = sideC;
-        double area = ((base * height) / 2);
+        double s = ((side1 + side2 + side3) / 2);
+        double area = Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
         System.out.println(area);
     }
 
     public void perimeter() {
-        double perimeter = sideA + sideB + sideC;
+        double perimeter = side1 + side2 + side3;
         System.out.println(perimeter);
     }
 }
