@@ -2,11 +2,17 @@ public class EquilateralTriangle extends Triangle {
     
     String name;
     double side;
+    double area;
+    double perimeter;
 
     // Create constructors
 
    public EquilateralTriangle(String name, double side) {
     super(name, side, side, side);
+    this.name = name;
+    this.side1 = side;
+    this.side2 = side;
+    this.side3 = side;
    }
 
    // getters and setters
@@ -30,12 +36,18 @@ public class EquilateralTriangle extends Triangle {
    }
 
    // Area and perimeter
-   public void getArea() {
-    super.area();
+   public double getArea() {
+    return super.area();
    }
 
-   public void getPerimeter() {
-       super.perimeter();
+   public double getPerimeter() {
+      return super.perimeter();
    }
+
+   // toString()
+   public String toString() {
+    // return("Shape EquilateralTriangle[name=" + name + ", area=" + this.getArea() + ", perimeter=" + this.getPerimeter() + "]");
+    return(super.toString());
+}
 
 }
