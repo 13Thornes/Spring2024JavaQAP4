@@ -8,9 +8,16 @@ public class Demo {
 
         // System.out.println(c1.toString());
 
-        Triangle t1 = new Triangle();
+        Triangle t1 = new Triangle("Red", 3, 4, 5);
 
         t1.area();
         t1.perimeter();
+
+        EquilateralTriangle et1 = new EquilateralTriangle("Green", 3);
+
+        et1.getArea();
+
+        et1.getPerimeter();
+
     }
 }
