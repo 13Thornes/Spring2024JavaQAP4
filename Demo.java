@@ -12,5 +12,12 @@ public class Demo {
 
         t1.area();
         t1.perimeter();
+
+        EquilateralTriangle et1 = new EquilateralTriangle("Green", 3);
+
+        et1.getArea();
+
+        et1.getPerimeter();
+
     }
 }
