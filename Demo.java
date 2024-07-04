@@ -1,23 +1,25 @@
 public class Demo {
     public static void main(String[] args) {
-        // Circle c1 = new Circle("Red", 5);
 
-        // c1.area();
+        ShapeList s1 = new ShapeList();
 
-        // c1.perimeter();
+        Circle c1 = new Circle("Red", 5);
+        
+        s1.addShape(c1);
 
-        // System.out.println(c1.toString());
+        Triangle t1 = new Triangle("Green", 3, 4, 5);
 
-        Triangle t1 = new Triangle("Red", 3, 4, 5);
+        s1.addShape(t1);
 
-        t1.area();
-        t1.perimeter();
+        EquilateralTriangle et1 = new EquilateralTriangle("Blue", 3);
 
-        EquilateralTriangle et1 = new EquilateralTriangle("Green", 3);
+        s1.addShape(et1);
 
-        et1.getArea();
+        s1.showShapeList();
+        
 
-        et1.getPerimeter();
+        
+
 
     }
 }

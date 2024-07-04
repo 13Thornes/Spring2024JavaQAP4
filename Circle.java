@@ -3,14 +3,11 @@ public class Circle extends Shape{
     // initialize variables
     String name;
     double radius;
+    double area;
+    double perimeter;
 
 
     // create constructors
-    public Circle() {
-        this.name = "Default";
-        this.radius = 2;
-    }
-
     public Circle(String name, double radius) {
         this.name = name;
         this.radius = radius;
@@ -35,20 +32,20 @@ public class Circle extends Shape{
 
 
     // Area and perimeter from the Shape class
-    public void area() {
-        double area = Math.PI * (radius * radius);
-        System.out.println(area);
+    public double area() {
+        area = Math.PI * (radius * radius);
+        return area;
     }
 
-    public void perimeter() {
-        double perimeter = Math.PI * (radius * 2);
-        System.out.println(perimeter);
+    public double perimeter() {
+        perimeter = Math.PI * (radius * 2);
+        return perimeter;
     }
 
     // toString() method
 
     public String toString() {
-        return("Shape Circle[name=" + name + ", radius=" + radius + "]");
+        return(super.toString());
     }
     
 }

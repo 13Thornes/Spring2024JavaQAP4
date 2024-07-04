@@ -1,13 +1,16 @@
+
+
 abstract class Shape {
 
-    String name;
+    public abstract String getName();
 
-    public abstract void area();
+    public abstract double area();
 
-    public abstract void perimeter();
+    public abstract double perimeter();
 
+    
     public String toString() {
-        return("Shape[name=" + name + "]");
+        return("Shape[name=" + this.getName() + ", area=" + this.area() + ", perimeter=" + this.perimeter() + "]");
     }
 
 }

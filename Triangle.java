@@ -3,6 +3,8 @@ public class Triangle extends Shape{
     double side1;
     double side2;
     double side3;
+    double area;
+    double perimeter;
 
     // create constructor
 
@@ -22,7 +24,7 @@ public class Triangle extends Shape{
                 if(side3 + side1 < side2) {
                     throw new ArithmeticException("Triangle is invalid");
                 } else {
-                    System.out.println("Triangle is valid");
+                    // System.out.println("Triangle is valid");
                 }
             } 
           };
@@ -64,14 +66,20 @@ public class Triangle extends Shape{
 
     // Area and perimiter
 
-    public void area() {
+    public double area() {
         double s = ((side1 + side2 + side3) / 2);
-        double area = Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
-        System.out.println(area);
+        area = Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
+        return area;
     }
 
-    public void perimeter() {
-        double perimeter = side1 + side2 + side3;
-        System.out.println(perimeter);
+    public double perimeter() {
+        perimeter = side1 + side2 + side3;
+        return perimeter;
+    }
+
+    // toString()
+    public String toString() {
+        // return("Shape Triangle[name=" + name + ", area=" + this.area() + ", perimeter=" + this.perimeter() + "]");
+        return(super.toString());
     }
 }
