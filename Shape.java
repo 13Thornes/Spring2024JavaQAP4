@@ -1,12 +1,14 @@
 
 
-abstract class Shape {
+abstract class Shape implements Scalable {
 
     public abstract String getName();
 
     public abstract double area();
 
     public abstract double perimeter();
+
+    public abstract void scale(double scaleFactor);
 
     
     public String toString() {
