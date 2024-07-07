@@ -36,12 +36,22 @@ public class EquilateralTriangle extends Triangle {
    }
 
    // Area and perimeter
-   public double getArea() {
+   public double area() {
     return super.area();
    }
 
-   public double getPerimeter() {
+   public double perimeter() {
       return super.perimeter();
+   }
+
+   // Scale method
+   public void scale(double scaleFactor) {
+    this.side = side * scaleFactor;
+    this.side1 = side1 * scaleFactor;
+    this.side2 = side2 * scaleFactor;
+    this.side3 = side3 * scaleFactor;
+    area = this.area();
+    perimeter = this.perimeter();
    }
 
    // toString()

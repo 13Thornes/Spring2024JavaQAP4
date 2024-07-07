@@ -77,6 +77,16 @@ public class Triangle extends Shape{
         return perimeter;
     }
 
+    // Scale method
+    @Override
+    public void scale(double scaleFactor) {
+        this.side1 = side1 * scaleFactor;
+        this.side2 = side2 * scaleFactor;
+        this.side3 = side3 * scaleFactor;
+        area = this.area();
+        perimeter = this.perimeter();
+    }
+
     // toString()
     public String toString() {
         // return("Shape Triangle[name=" + name + ", area=" + this.area() + ", perimeter=" + this.perimeter() + "]");

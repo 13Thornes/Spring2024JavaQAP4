@@ -68,6 +68,11 @@ public class Ellipse extends Shape {
     public double perimeter() {
         // perimeter =  (((a * a) + (b * b)) - )
         return perimeter;
-}
+    }
+
+    public void scale(double scaleFactor) {
+        area = this.area();
+        perimeter = this.perimeter();
+    }
 
 }

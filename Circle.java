@@ -42,6 +42,14 @@ public class Circle extends Shape{
         return perimeter;
     }
 
+    // Scale method
+
+    public void scale(double scaleFactor) {
+        this.radius = radius * scaleFactor;
+        area = this.area();
+        perimeter = this.perimeter();
+    }
+
     // toString() method
 
     public String toString() {
