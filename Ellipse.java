@@ -64,7 +64,6 @@ public class Ellipse extends Shape {
         return area;
     }
 
-    //// FIX THIS IN TUTORING
     public double perimeter() {
        
         double step1 = 2 * ((Math.pow(a, 2)) + (Math.pow(b, 2)));
