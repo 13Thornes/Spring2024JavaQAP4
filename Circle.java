@@ -1,3 +1,7 @@
+// Project: Java QAP4 
+// Author: Samantha Thorne
+// Date: July 4-10 2024
+
 public class Circle extends Shape{
 
     // initialize variables
@@ -7,7 +11,7 @@ public class Circle extends Shape{
     double perimeter;
 
 
-    // create constructors
+    // create constructor
     public Circle(String name, double radius) {
         this.name = name;
         this.radius = radius;
@@ -31,7 +35,7 @@ public class Circle extends Shape{
     }
 
 
-    // Area and perimeter from the Shape class
+    // Area and perimeter
     public double area() {
         area = Math.PI * (radius * radius);
         return area;

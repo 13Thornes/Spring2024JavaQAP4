@@ -1,4 +1,10 @@
+// Project: Java QAP4 
+// Author: Samantha Thorne
+// Date: July 4-10 2024
+
 public class Triangle extends Shape{
+
+    // initialize variables
     String name;
     double side1;
     double side2;
@@ -7,14 +13,13 @@ public class Triangle extends Shape{
     double perimeter;
 
     // create constructor
-
     public Triangle(String name, double a, double b, double c) {
         this.name = name;
         this.side1 = a;
         this.side2 = b;
         this.side3 = c;
         
-        
+        // validate if shape is a valid triangle
           if(side1 + side2 < side3) {
             throw new ArithmeticException("Triangle is invalid");
           } else {
@@ -65,7 +70,6 @@ public class Triangle extends Shape{
     }
 
     // Area and perimiter
-
     public double area() {
         double s = ((side1 + side2 + side3) / 2);
         area = Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
@@ -78,7 +82,6 @@ public class Triangle extends Shape{
     }
 
     // Scale method
-    @Override
     public void scale(double scaleFactor) {
         this.side1 = side1 * scaleFactor;
         this.side2 = side2 * scaleFactor;
@@ -89,7 +92,6 @@ public class Triangle extends Shape{
 
     // toString()
     public String toString() {
-        // return("Shape Triangle[name=" + name + ", area=" + this.area() + ", perimeter=" + this.perimeter() + "]");
         return(super.toString());
     }
 }

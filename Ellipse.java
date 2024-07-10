@@ -1,4 +1,9 @@
+// Project: Java QAP4 
+// Author: Samantha Thorne
+// Date: July 4-10 2024
+
 public class Ellipse extends Shape {
+    // initialize variables
     String name;
     double a;
     double b;
@@ -58,7 +63,6 @@ public class Ellipse extends Shape {
     }
 
     // Area and perimeter
-
     public double area() {
         area = Math.PI * a * b;
         return area;
@@ -73,11 +77,17 @@ public class Ellipse extends Shape {
         return perimeter;
     }
 
+    // scale method
     public void scale(double scaleFactor) {
         this.a = a * scaleFactor;
         this.b = b * scaleFactor;
         area = this.area();
         perimeter = this.perimeter();
+    }
+
+    // toString() method
+    public String toString() {
+        return(super.toString());
     }
 
 }
