@@ -66,11 +66,17 @@ public class Ellipse extends Shape {
 
     //// FIX THIS IN TUTORING
     public double perimeter() {
-        // perimeter =  (((a * a) + (b * b)) - )
+       
+        double step1 = 2 * ((Math.pow(a, 2)) + (Math.pow(b, 2)));
+        double step2 = ((Math.pow(a-b, 2))/2);
+        double step3 = step1 - step2;
+        double perimeter = (Math.PI * (Math.sqrt(step3)));
         return perimeter;
     }
 
     public void scale(double scaleFactor) {
+        this.a = a * scaleFactor;
+        this.b = b * scaleFactor;
         area = this.area();
         perimeter = this.perimeter();
     }
