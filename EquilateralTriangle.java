@@ -1,12 +1,16 @@
+// Project: Java QAP4 
+// Author: Samantha Thorne
+// Date: July 4-10 2024
+
 public class EquilateralTriangle extends Triangle {
     
+    // initialize variables
     String name;
     double side;
     double area;
     double perimeter;
 
     // Create constructors
-
    public EquilateralTriangle(String name, double side) {
     super(name, side, side, side);
     this.name = name;
@@ -56,7 +60,6 @@ public class EquilateralTriangle extends Triangle {
 
    // toString()
    public String toString() {
-    // return("Shape EquilateralTriangle[name=" + name + ", area=" + this.getArea() + ", perimeter=" + this.getPerimeter() + "]");
     return(super.toString());
 }
 

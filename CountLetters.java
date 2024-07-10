@@ -1,3 +1,7 @@
+// Project: Java QAP4 
+// Author: Samantha Thorne
+// Date: July 4-10 2024
+
 import java.util.Scanner;
 public class CountLetters{
     public static void main(String[ ] args)
